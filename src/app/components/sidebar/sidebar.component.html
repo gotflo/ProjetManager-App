@@ -1,0 +1,78 @@
+<header>
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <!-- //////////////////////////////////////////// -->
+    <!-- ///////////////////////////////////////////////// -->
+
+    <div class="position-sticky">
+      <div class="card-body fa-fw me-3">
+        <h5 class="card-title"><i class="bi bi-person-fill"></i></h5>
+        <p class="card-text" style="padding-left: 4rem; margin-top: -2.2rem">
+          <!-- *ngFor="let user of users" -->
+          <!-- {{ user.username }} -->
+          {{ username }}
+        </p>
+      </div>
+
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a
+          routerLink="/dashboard"
+          class="list-group-item list-group-item-action py-2 ripple active"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i
+          ><span>Tableau de bord</span>
+        </a>
+        <a
+          class="list-group-item list-group-item-action py-2 ripple hover"
+          routerLink="/companyList"
+          ><i class="fa-solid fa-list fa-fw me-3"></i
+          ><span>Liste des Company</span></a
+        >
+        <a
+          class="list-group-item list-group-item-action py-2 ripple hover"
+          routerLink="/projectList"
+          ><i class="fa-solid fa-list fa-fw me-3"></i
+          ><span>Liste des projets</span></a
+        >
+        <a
+          class="list-group-item list-group-item-action py-2 ripple hover"
+          routerLink="/taskList"
+        >
+          <i class="fa-solid fa-list-check fa-fw me-3"></i
+          ><span>Liste des taches</span>
+        </a>
+
+        <a
+          class="list-group-item list-group-item-action py-2 ripple hover"
+          routerLink="/taskManagement"
+        >
+          <i class="bi bi-clipboard2-plus fa-fw me-3"></i
+          ><span>Gestion des taches</span>
+        </a>
+
+        <a
+          class="list-group-item list-group-item-action py-2 ripple hover"
+          routerLink="/taskLog"
+        >
+          <i class="bi bi-journal-bookmark-fill fa-fw me-3"></i
+          ><span>Journal des tâches</span></a
+        >
+
+        <a
+          class="list-group-item list-group-item-action py-2 ripple hover"
+          routerLink="/user"
+          ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
+        >
+
+        <a
+          (click)="Logout()"
+          class="list-group-item list-group-item-action py-2 ripple logout"
+        >
+          <i class="bi bi-box-arrow-left fa-fw me-3"></i><span>Logout</span></a
+        >
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+</header>

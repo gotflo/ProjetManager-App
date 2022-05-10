@@ -1,0 +1,132 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="taskManager">
+    <h1
+      class="p-2 mb-1 bg-info bg-gradient text-dark"
+      style="border-radius: 7px; margin-left: 1.5rem"
+    >
+      Gestion des taches et projets
+    </h1>
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 card1">
+      <div class="card2">
+        <p>Gestion des projets</p>
+        <form
+          #addtaProjectform="ngForm"
+          (ngSubmit)="createProject(addtaProjectform)"
+        >
+          <!-- Project input -->
+          <div class="form-outline mb-4">
+            <input
+              type="projectName"
+              id="projectName"
+              name="projectName"
+              class="boxshad form-control form-control-lg"
+              placeholder="Entrer un nom valide pour votre projet"
+              required
+              [(ngModel)]="project.projectName"
+            />
+            <label class="form-label" for="project_Name"
+              >Designation du projet</label
+            >
+          </div>
+
+          <!-- Tasks input -->
+          <div class="d-flex align-items-center mb-2">
+            <p class="small mb-0 me-2 text-muted">Company</p>
+            <select
+              class="select"
+              style="width: 20rem; height: 2rem"
+              ngModelGroup="company"
+              (change)="ChargeProject($event)"
+            >
+              <option disabled selected>Sélctionner la company</option>
+              <option
+                name="idCompany"
+                id="idCompany"
+                *ngFor="let company of companys"
+                [value]="company.idCompany"
+                required
+                [(ngModel)]="selectedValueProject"
+              >
+                {{ company.companyName }}
+              </option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-between align-items-center"></div>
+          <div class="text-center text-lg-start mt-1 pt-2">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                align-items: center;
+              "
+            >
+              Enregistrer
+            </button>
+          </div>
+          <div></div>
+        </form>
+      </div>
+
+      <div class="card2">
+        <p>Gestion des tâches</p>
+        <form #addtaskform="ngForm" (ngSubmit)="createTask(addtaskform)">
+          <!-- {{task | json}} -->
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input
+              type="taskName"
+              id="taskName"
+              name="taskName"
+              class="boxshad form-control form-control-lg"
+              placeholder="Entrer un nom valide pour votre tâches"
+              required
+              [(ngModel)]="task.taskName"
+            />
+            <label class="form-label" for="taskName"
+              >Designation de la tâche</label
+            >
+          </div>
+
+          <div class="d-flex align-items-center mb-2">
+            <select
+              (change)="ChangeDepartment($event)"
+              class="form-select"
+              size="6"
+              aria-label="size 6 select example"
+              ngModelGroup="project"
+            >
+              <option disabled selected>Sélectionner le projet</option>
+              <option
+                name="idProject"
+                id="idProject"
+                *ngFor="let project of projects"
+                [value]="project.idProject"
+                required
+                [(ngModel)]="selectedValue"
+              >
+                {{ project.projectName }}
+              </option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-between align-items-center"></div>
+          <div class="text-center text-lg-start mt-1 pt-2">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                align-items: center;
+              "
+            >
+              Enregistrer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

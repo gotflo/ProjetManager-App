@@ -1,0 +1,34 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header bg-info">Liste total des Companys</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th>Company</th>
+              <!-- <th>Désignation du projet</th> -->
+              <th>Nombres de projets</th>
+              <th>Nombres de taches</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="colorr">
+            <tr *ngFor="let company of companys" class="colorr">
+              <!-- <td> {{ projet.idProject }} </td> -->
+              <td>{{ company.companyName }}</td>
+              <!-- <td> {{ company.projectName }} </td> -->
+              <td>{{ company.projects.length }}</td>
+              <td>{{ taskallSize }}</td>
+              <!-- <td> {{projet.projTaskSize}} </td> -->
+              <td>
+                <button style="margin-right: 16px">Visualiser</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <!-- /************************create TaskLog************************************/ -->
+  <div class="taskManager">
+    <h1
+      class="p-2 mb-1 bg-info bg-gradient text-dark"
+      style="border-radius: 7px"
+    >
+      Assignation d'une tâche à un utilisateur
+    </h1>
+    <div class="card2">
+      <form
+        #addtaskLogform="ngForm"
+        (ngSubmit)="createTaskLog(addtaskLogform); addtaskLogform.reset()"
+      >
+        <div class="bossDispo">
+          <div class="disposition">
+            <div
+              class="d-flex align-items-center"
+              style="
+                margin-left: -2rem;
+                margin-bottom: -1.7rem;
+                margin-top: 1rem;
+              "
+            >
+              <p class="small mb-0 me-2 text-muted">Temps de réalisation</p>
+              <div class="form-outline mb-4">
+                <input
+                  type="taskMinutes"
+                  id="taskMinutes"
+                  name="taskMinutes"
+                  class="boxshad form-control form-control-lg"
+                  placeholder="Entrer un temps de réalisation valide"
+                  required
+                  [(ngModel)]="taskLog.taskMinutes"
+                />
+              </div>
+            </div>
+
+            <div class="disposition">
+              <div class="d-flex align-items-center mb-2">
+                <p class="small mb-0 me-2 text-muted">Tâches</p>
+                <select
+                  class="select"
+                  style="width: 28.7rem; height: 2.3rem; margin-left: 1.3rem"
+                  ngModelGroup="task"
+                  (change)="ChargeTask($event)"
+                >
+                  <option disabled selected>Sélctionner la tâche</option>
+                  <option
+                    name="idTask"
+                    id="idTask"
+                    *ngFor="let task of tasks"
+                    [value]="task.idTask"
+                    required
+                    [(ngModel)]="selectedValueTask"
+                  >
+                    {{ "(" + task.pojectName + ") --- " + task.taskName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <!-- /******************************************************************/ -->
+            <div class="disposition">
+              <div class="d-flex align-items-center mb-2">
+                <p class="small mb-0 me-2 text-muted">Utilisateurs</p>
+                <select
+                  class="select"
+                  style="width: 28.6rem; height: 2.3rem"
+                  ngModelGroup="user"
+                  (change)="ChargeUser($event)"
+                >
+                  <option disabled selected>Sélctionner l'utilisateur</option>
+                  <option
+                    name="username"
+                    id="username"
+                    *ngFor="let user of users"
+                    [value]="user.username"
+                    required
+                    [(ngModel)]="selectedValueUser"
+                  >
+                    {{ user.username }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="disposition">
+            <div class="md-form md-outline input-with-post-icon datepicker">
+              <label for="taskLogDate">Selectionner la date</label>
+              <input
+                id="taskLogDate"
+                name="taskLogDate"
+                placeholder="Selectionner la date"
+                type="date"
+                class="form-control"
+                required
+                [(ngModel)]="taskLog.taskLogDate"
+              />
+            </div>
+
+            <div class="md-form">
+              <label for="form7">Description</label>
+              <textarea
+                id="taskDescription"
+                name="taskDescription"
+                type="text"
+                required
+                [(ngModel)]="taskLog.taskDescription"
+                class="md-textarea form-control"
+                rows="5"
+                style="width: 24rem"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-lg-start mt-1 pt-2">
+          <button type="submit" class="btn btn-primary btnDign">
+            Enregistrer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- /************************List TaskLog************************************/ -->
+  <div class="row" style="padding-bottom: 4rem">
+    <div class="card">
+      <div class="card-header bg-info">Journal des tâches</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th class="title">Désignation de la tâche</th>
+              <th class="title">Utilisateur</th>
+              <th class="title">Description de la tâche</th>
+              <th class="title">Date</th>
+              <!-- <th class="title">Role</th> -->
+              <th class="title">Temps d'éxécution</th>
+              <th class="title">Action</th>
+            </tr>
+          </thead>
+          <tbody class="colorr">
+            <tr *ngFor="let taskLog of tasksLog" class="colorr">
+              <td>{{ taskLog.taskName }}</td>
+              <td>{{ taskLog.username }}</td>
+              <td>{{ taskLog.taskDescription }}</td>
+              <td>{{ taskLog.taskLogDate }}</td>
+              <td class="title">{{ taskLog.taskMinutes + " min" }}</td>
+              <!-- <td *ngIf="user.admin!; true">Administrateur</td>
+              <td *ngIf="user.admin!; false">user</td> -->
+              <td>
+                <span class="table-remove"
+                  ><button
+                    type="button"
+                    class="btn btn-danger btn-rounded btn-sm my-0"
+                    (click)="deleteTaskLog(taskLog.idTaskLog)"
+                  >
+                    Remove
+                  </button></span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker" />
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->

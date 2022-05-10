@@ -1,0 +1,108 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="taskManager">
+    Modification des taches et projets
+
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 card1">
+      <!-- <div class="card2"> -->
+
+      <div class="card2">
+        <p>Modification d'un projets</p>
+        <form>
+          <!-- Project input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="project_Name"
+              >Designation du projet</label
+            >
+            <input
+              disabled
+              readonly
+              type="projectName"
+              id="projectName"
+              name="projectName"
+              class="boxshad form-control-lg"
+            />
+          </div>
+
+          <div class="form-outline mb-4">
+            <label class="form-label" for="companyName"
+              >Company correspondante</label
+            >
+            <input
+              disabled
+              readonly
+              type="companyName"
+              id="companyName"
+              name="companyName"
+              class="boxshad form-control-lg"
+              placeholder="Entrer Le nom de la company"
+            />
+          </div>
+
+          <div class="text-center text-lg-start mt-1 pt-2">
+            <button
+              disabled
+              class="btn btn-primary"
+              style="
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                align-items: center;
+              "
+            >
+              Enregistrer
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card2">
+        <p>Modification d'une tâches</p>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-outline mb-4">
+            <label class="form-label" for="taskName"
+              >Designation de la tâche</label
+            >
+            <input
+              type="taskName"
+              id="taskName"
+              name="taskName"
+              class="boxshad form-control-lg"
+              required
+              [(ngModel)]="task.taskName"
+            />
+          </div>
+
+          <div class="form-outline mb-4">
+            <label class="form-label" for="taskName"
+              >Projet correspondant
+            </label>
+            <input
+              disabled
+              readonly
+              type="pojectId"
+              id="pojectId"
+              name="pojectId"
+              class="boxshad form-control-lg"
+              required
+              [(ngModel)]="task.pojectName"
+            />
+          </div>
+
+          <div class="text-center text-lg-start mt-1 pt-2">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                align-items: center;
+              "
+            >
+              Enregistrer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

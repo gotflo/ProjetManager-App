@@ -1,0 +1,147 @@
+<!--Main Navigation-->
+<header>
+  <div class="text-white bg-success cardtitle">
+    <div>
+      <div class="card-headertitle">
+        Nom de la company :
+        <p *ngFor="let company of companys" class="companyNam">
+          {{ company.companyName }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="card1">
+        <!-- <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div> -->
+
+        <div class="card text-white tacheCard mb-3" style="max-width: 18rem">
+          <i class="bi bi-pie-chart-fill"></i>
+          <div class="card-header">
+            <a
+              routerLink="/projectList"
+              style="text-decoration: none; color: white"
+              >Projets</a
+            >
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" *ngFor="let company of companys">
+              {{ company.projects.length }}
+            </h5>
+          </div>
+          <div class="card-body"></div>
+        </div>
+
+        <div class="card text-white tacheCard mb-3" style="max-width: 18rem">
+          <i class="bi bi-clipboard-data"></i>
+          <div class="card-header">
+            <a
+              routerLink="/taskList"
+              style="text-decoration: none; color: white"
+              >Taches</a
+            >
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ taskallSize }}
+            </h5>
+          </div>
+          <div class="card-body"></div>
+        </div>
+
+        <div class="card text-white tacheCard mb-3" style="max-width: 18rem">
+          <i class="bi bi-people"></i>
+          <div class="card-header">
+            <a routerLink="/user" style="text-decoration: none; color: white"
+              >Utilisateurs</a
+            >
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ userAllSize }}
+            </h5>
+          </div>
+          <div class="card-body"></div>
+        </div>
+
+        <!--
+<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Danger card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card bg-warning mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Warning card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-body bg-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Info card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Light card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Dark card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <div
+      style="
+        text-align: center;
+        width: 650px;
+        height: 100px;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        display: block;
+      "
+    >
+      <div>
+        <canvas
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          charType="bar"
+        >
+        </canvas>
+        <p style="padding-top: 1rem; text-decoration: underline">
+          graphique de réalisation des taches
+        </p>
+      </div>
+      <!-- <div >
+  <canvas baseChart
+  [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [legend]="barChartLegend"
+    charType="bar">
+  </canvas>
+  <p style="padding-top: 1rem; text-decoration: underline;">graphique de réalisation des taches</p>
+</div> -->
+    </div>
+  </div>
+
+  <app-sidebar></app-sidebar>
+</header>

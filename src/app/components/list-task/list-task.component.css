@@ -1,0 +1,30 @@
+.card {
+  margin-top: 2%;
+}
+
+.colorr {
+  color: black;
+}
+
+.title {
+  align-content: center;
+  text-align: center;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  /* text-align: justify; */
+  /* margin: 0 auto; */
+  /* margin-bottom: 9rem; */
+  align-items: center;
+  align-content: center;
+  /* margin-top: 20%; */
+  position: relative;
+  left: 118px;
+  width: 80%;
+  /* background: blue; */
+  /* height: 100vh; */
+
+  /* display: flex; */
+}

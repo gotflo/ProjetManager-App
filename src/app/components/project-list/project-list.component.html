@@ -1,0 +1,51 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header bg-info">Liste total des projets</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th class="title">Désignation du projet</th>
+              <th class="title">Company correspondant</th>
+              <th class="title">Nombres de taches</th>
+              <th class="title">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="colorr">
+            <tr *ngFor="let projet of projects" class="colorr">
+              <!-- <td> {{ projet.idProject }} </td> -->
+              <td>{{ projet.projectName }}</td>
+              <td class="title">{{ projet.companyName }}</td>
+              <td class="title">{{ projet.taskList.length }}</td>
+              <td>
+                <span class="table-update">
+                  <button
+                    type="button"
+                    class="btn btn-outline-info btn-rounded btn-sm my-0"
+                    data-mdb-ripple-color="dark"
+                    style="margin-right: 30px"
+                    (click)="updateProject(projet.idProject)"
+                  >
+                    Update
+                  </button>
+                </span>
+                <span class="table-remove"
+                  ><button
+                    type="button"
+                    class="btn btn-danger btn-rounded btn-sm my-0"
+                    style="margin-right: -70px"
+                    (click)="deleteProject(projet.idProject)"
+                  >
+                    Remove
+                  </button></span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

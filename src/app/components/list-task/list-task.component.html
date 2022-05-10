@@ -1,0 +1,55 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header bg-info">Liste total des taches</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th class="title">ID</th>
+              <th class="title">Désignation du projet</th>
+              <th class="title">Désignation de la tâche</th>
+              <th class="title">Modification</th>
+            </tr>
+          </thead>
+          <tbody class="colorr">
+            <tr *ngFor="let task of tasks" class="colorr">
+              <td class="title">{{ task.idTask }}</td>
+              <td>{{ task.pojectName }}</td>
+              <td>{{ task.taskName }}</td>
+              <td>
+                <span class="table-update">
+                  <button
+                    type="button"
+                    class="btn btn-outline-info btn-rounded btn-sm my-0"
+                    data-mdb-ripple-color="dark"
+                    style="margin-right: 39px"
+                    (click)="updateTask(task.idTask)"
+                  >
+                    Update
+                  </button>
+                </span>
+                <span class="table-remove"
+                  ><button
+                    type="button"
+                    class="btn btn-danger btn-rounded btn-sm my-0"
+                    style="margin-right: -99px"
+                    (click)="deleteTask(task.idTask)"
+                  >
+                    Remove
+                  </button></span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- <button mat-raised-button color="primary" (click)="confirmDialog()">
+    Confirm
+  </button>
+  <br />
+  Response is: {{ result }} -->
+</div>

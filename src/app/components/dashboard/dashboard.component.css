@@ -1,0 +1,415 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  /* text-align: justify; */
+  /* margin: 0 auto; */
+  /* margin-bottom: 9rem; */
+  align-items: center;
+  align-content: center;
+  margin-top: 3%;
+  position: relative;
+  left: 108px;
+  width: 80%;
+  /* background: blue; */
+  /* height: 100vh; */
+
+  /* display: flex; */
+}
+
+.cardtitle {
+  height: 2rem;
+  max-height: 2rem;
+  max-width: 70rem;
+  margin-left: 15rem;
+  margin-top: -1rem;
+
+  /* display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto; */
+}
+
+.card-headertitle {
+  padding-top: 4px;
+  padding-left: 14px;
+  display: inline;
+  color: #eeeaea;
+}
+
+.companyNam {
+  display: inline;
+  padding-top: 4px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.card1 {
+  width: 45rem;
+  margin-top: 8%;
+
+  /* position: absolute; */
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.bi-pie-chart-fill {
+  color: rgb(0, 255, 128);
+}
+
+.bi-clipboard-data {
+  color: rgb(0, 255, 200);
+}
+
+.bi-people {
+  color: rgb(0, 255, 115);
+}
+
+.bi {
+  margin-left: 0.75rem;
+  margin-top: -2rem;
+  font-size: 3rem;
+  width: 6rem;
+  height: 5.5rem;
+  padding-top: 1rem;
+  padding-left: 1.3rem;
+  border-radius: 9px;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 1) 0%,
+    rgba(7, 127, 115, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 1) 0%,
+    rgba(7, 127, 115, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 1) 0%,
+    rgba(7, 127, 115, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#064943', endColorstr='#077F73', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 1) 0%,
+    rgba(7, 127, 115, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 1) 0%,
+    rgba(7, 127, 115, 1) 100%
+  );
+}
+
+.card-header {
+  margin-left: 19.5rem;
+  margin-top: 0.7rem;
+  margin-bottom: -7.5rem;
+  font-size: 21px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.card-title {
+  margin-top: 3.5rem;
+  margin-bottom: -7.5rem;
+  margin-left: 6rem;
+  padding-top: 1rem;
+  font-size: 35px;
+  height: 3.3rem;
+  align-items: center;
+  text-align: center;
+  width: 3.5rem;
+  border-radius: 99px;
+
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 0.44) 0%,
+    rgba(9, 177, 161, 0.43) 100%
+  );
+
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 0.14) 0%,
+    rgba(9, 177, 161, 0.15) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 0.14) 0%,
+    rgba(9, 177, 161, 0.15) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 0.14) 0%,
+    rgba(9, 177, 161, 0.15) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#064943', endColorstr='#09B1A1', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 0.14) 0%,
+    rgba(9, 177, 161, 0.15) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    331deg,
+    rgba(6, 73, 67, 0.14) 0%,
+    rgba(9, 177, 161, 0.15) 100%
+  );
+
+  box-shadow: 0 0 1px rgba(22, 219, 226, 0.37), 0 0 3px rgba(141, 188, 226, 0.5),
+    0 0 10px rgba(45, 178, 230, 0.432), 0 0 0 1px rgba(103, 190, 231, 0.37);
+}
+
+.projectCard {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    121deg,
+    rgba(88, 143, 139, 1) 0%,
+    rgba(14, 160, 148, 1) 47%,
+    rgba(59, 100, 203, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    121deg,
+    rgba(88, 143, 139, 1) 0%,
+    rgba(14, 160, 148, 1) 47%,
+    rgba(59, 100, 203, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    121deg,
+    rgba(88, 143, 139, 1) 0%,
+    rgba(14, 160, 148, 1) 47%,
+    rgba(59, 100, 203, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3B64CB', endColorstr='#588F8B', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    121deg,
+    rgba(88, 143, 139, 1) 0%,
+    rgba(14, 160, 148, 1) 47%,
+    rgba(59, 100, 203, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    121deg,
+    rgba(88, 143, 139, 1) 0%,
+    rgba(14, 160, 148, 1) 47%,
+    rgba(59, 100, 203, 1) 100%
+  );
+}
+
+.tacheCard {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    119deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(0, 150, 136, 1) 44%,
+    rgba(1, 60, 54, 1) 96%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    119deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(0, 150, 136, 1) 44%,
+    rgba(1, 60, 54, 1) 96%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    119deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(0, 150, 136, 1) 44%,
+    rgba(1, 60, 54, 1) 96%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013C36', endColorstr='#009688', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    119deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(0, 150, 136, 1) 44%,
+    rgba(1, 60, 54, 1) 96%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    119deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(0, 150, 136, 1) 44%,
+    rgba(1, 60, 54, 1) 96%
+  );
+}
+
+.card {
+  display: flex;
+  margin-left: -4rem;
+  margin-right: 10rem;
+  padding-right: 14rem;
+  width: 15rem;
+  height: 8.5rem;
+  align-items: center;
+  align-content: center;
+  /* margin: 0 auto; */
+  /* flex-direction: row; */
+}
+
+.tacheCard:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0 0 1px rgba(22, 219, 226, 0.37), 0 0 3px rgba(141, 188, 226, 0.5),
+    0 0 10px rgba(45, 178, 230, 0.432), 0 0 0 1px rgba(103, 190, 231, 0.37);
+  cursor: pointer;
+  top: -4px;
+  border: 1px solid #cccccc;
+  color: aqua;
+
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 150, 88, 1) 60%,
+    rgba(76, 175, 80, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 150, 88, 1) 60%,
+    rgba(76, 175, 80, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 150, 88, 1) 60%,
+    rgba(76, 175, 80, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4CAF50', endColorstr='#009688', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 150, 88, 1) 60%,
+    rgba(76, 175, 80, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 150, 136, 1) 0%,
+    rgba(0, 150, 88, 1) 60%,
+    rgba(76, 175, 80, 1) 100%
+  );
+
+  /***************************************************************************************/
+}
+
+.tacheCard:hover:before {
+  transform: scale(2.15);
+}
+
+/* .card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transition: transform 0.15s ease-out;
+} */
+header {
+  position: relative;
+}
+body {
+  background-color: #fbfbfb;
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}

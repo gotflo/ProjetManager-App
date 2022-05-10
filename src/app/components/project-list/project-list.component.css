@@ -1,0 +1,18 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  left: 118px;
+  width: 80%;
+}
+
+.card {
+  margin-top: 2%;
+}
+
+.title {
+  align-content: center;
+  text-align: center;
+}

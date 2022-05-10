@@ -1,0 +1,141 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header bg-info">Liste total des Utilisateurs</div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th class="title">Nom d'utilisateur</th>
+              <th class="title">Nom de famille</th>
+              <th class="title">Prénom</th>
+              <th class="title">E-mail</th>
+              <th class="title">Tâches à réaliser</th>
+              <!-- <th class="title">Role</th> -->
+              <th class="title">Action</th>
+            </tr>
+          </thead>
+          <tbody class="colorr">
+            <tr *ngFor="let user of users" class="colorr">
+              <td>{{ user.username }}</td>
+              <td>{{ user.lastName }}</td>
+              <td>{{ user.firstName }}</td>
+              <td>{{ user.email }}</td>
+              <td class="title">{{ user.taskLogList.length }}</td>
+              <!-- <td *ngIf="user.admin!; true">Administrateur</td>
+              <td *ngIf="user.admin!; false">user</td> -->
+              <td>
+                <span class="table-remove"
+                  ><button
+                    type="button"
+                    class="btn btn-danger btn-rounded btn-sm my-0"
+                    style="margin-right: -99px"
+                    (click)="deleteUser()"
+                  >
+                    Remove
+                  </button></span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- /************************create users************************************/ -->
+  <div class="taskManager">
+    <h1
+      class="p-2 mb-1 bg-info bg-gradient text-dark"
+      style="border-radius: 7px"
+    >
+      Enregistrement d'un utilisateur
+    </h1>
+    <div class="card2">
+      <form
+        #addtaskform="ngForm"
+        (ngSubmit)="createUser(addtaskform); addtaskform.reset()"
+      >
+        <div class="bossDispo">
+          <div class="disposition">
+            <div class="form-outline mb-4">
+              <input
+                type="username"
+                id="username"
+                name="username"
+                class="boxshad form-control form-control-lg"
+                placeholder="Entrer un nom d'utilisateur valide"
+                required
+                [(ngModel)]="user.username"
+              />
+              <label class="form-label" for="username">Nom d'utilisateur</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="lastName"
+                id="lastName"
+                name="lastName"
+                class="boxshad form-control form-control-lg"
+                placeholder="Entrer un nom de famille valide"
+                required
+                [(ngModel)]="user.lastName"
+              />
+              <label class="form-label" for="lastName">Nom de Famille</label>
+            </div>
+          </div>
+          <div class="disposition">
+            <div class="form-outline mb-4">
+              <input
+                type="firstName"
+                id="firstName"
+                name="firstName"
+                class="boxshad form-control form-control-lg"
+                placeholder="Entrer un prénom valide"
+                required
+                [(ngModel)]="user.firstName"
+              />
+              <label class="form-label" for="firstName"
+                >Prénoms de l'utilisateur</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="boxshad form-control form-control-lg"
+                placeholder="Entrer un email d'utilisateur valide"
+                required
+                [(ngModel)]="user.email"
+              />
+              <label class="form-label" for="email"
+                >email de l'utilisateur</label
+              >
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="boxshad form-control form-control-lg"
+                placeholder="Entrer un mot de passe valide"
+                required
+                [(ngModel)]="user.password"
+              />
+              <label class="form-label" for="password">Mot de passe</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-lg-start mt-1 pt-2">
+          <button type="submit" class="btn btn-primary btnDign">
+            Enregistrer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

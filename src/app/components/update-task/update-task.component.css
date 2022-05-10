@@ -1,0 +1,65 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  left: 100px;
+  width: 82%;
+}
+
+.pt-2 {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  left: 118px;
+  /* width: 82%; */
+}
+.card1 {
+  width: 55rem;
+  margin-top: 8%;
+
+  /* position: absolute; */
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -2rem;
+  margin: 0 2rem auto;
+}
+.card2 {
+  margin-top: 10%;
+  /* display: flex; */
+  margin-left: 4rem;
+  margin-right: 2rem;
+  align-items: center;
+  align-content: center;
+  /* width: 75rem; */
+  height: 20rem;
+  /* margin: 0 auto; */
+}
+
+#list1 .form-control {
+  border-color: transparent;
+}
+#list1 .form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+#list1 .select-input.form-control[readonly]:not([disabled]) {
+  background-color: #fbfbfb;
+}
+
+.taskManager {
+  text-align: center;
+}
+
+.boxshad {
+  width: 25rem;
+  box-shadow: 0 0 1px rgba(22, 219, 226, 0.37), 0 0 3px rgba(141, 188, 226, 0.5),
+    0 0 10px rgba(45, 178, 230, 0.432), 0 0 0 1px rgba(103, 190, 231, 0.37);
+}
+.logcont {
+  margin-top: -2rem;
+}
