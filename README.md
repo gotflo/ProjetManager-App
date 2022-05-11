@@ -76,14 +76,14 @@ Une fois qu’une tâche est accomplie l’administrateur a la possibilité de l
 
 ![Authentification](src/assets/userAdd.png)
 
-### 4 - Modification
+### 5 - Modification
 
 ![Authentification](src/assets/modification.png)
 
-### 4 - Modification
+### 6 - Liste des utilisateurs
 
 ![Authentification](src/assets/listUser.png)
 
-### 4 - Gestion des projets et tâche
+### 7 - Gestion des projets et tâche
 
 ![Authentification](src/assets/Change1.png)
