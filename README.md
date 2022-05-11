@@ -40,7 +40,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Application web de Gestion des projets
 
-1- Description du projet
+# 1- Description du projet
 
 Suite au cours de programmation distribuée de semestre 5,
 à l'Institut Polytechnique DEFITECH,
@@ -49,7 +49,7 @@ nous avons eu comme évaluation la réalisation d’un projet.
 Nous avons eu à réaliser un projet qui consiste en la réalisation d'une application web qui aura pour but de
 gerer les projets, tâches et utilisateurs d'une entreprise donné
 
-2- Fonctionnalités
+# 2- Fonctionnalités
 
 Notre application Web a plusieurs fonctionnalités. Le but principal est de pouvoir suivre l’évolution du projet que doit réaliser une entreprise donnée du commencement jusqu’à la fin.
 Les utilisateurs de notre produit sont les membres des entreprises qui disposeront de l’application.
@@ -58,7 +58,7 @@ L’application va tout d’abord permettre aux différents utilisateurs de se c
 Nous avons également la possibilité d’ajouter ou retirer des compagnies, d’ajouter ou retirer des projets au sein des entreprises, d’ajouter ou de retirer des tâches.
 Une fois qu’une tâche est accomplie l’administrateur a la possibilité de la marquée comme tâche terminée.
 
-3- Interface
+# 3- Interface
 
 ### 1 - Page d'authentification
 
