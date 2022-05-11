@@ -1,3 +1,5 @@
+![Authentification](src/assets/log.png)
+
 ## Installation
 
 Install ProjetManager-App with npm
@@ -57,3 +59,31 @@ Nous avons également la possibilité d’ajouter ou retirer des compagnies, d�
 Une fois qu’une tâche est accomplie l’administrateur a la possibilité de la marquée comme tâche terminée.
 
 3- Interface
+
+### 1 - Page d'authentification
+
+![Authentification](src/assets/ProjectManagerlogin.png)
+
+### 2 - Tableau de bord
+
+![Authentification](src/assets/Change3.png)
+
+### 3 - Journal des tâches
+
+![Authentification](src/assets/TaskLog.png)
+
+### 4 - Ajout d'un utilisateur
+
+![Authentification](src/assets/userAdd.png)
+
+### 4 - Modification
+
+![Authentification](src/assets/modification.png)
+
+### 4 - Modification
+
+![Authentification](src/assets/listUser.png)
+
+### 4 - Gestion des projets et tâche
+
+![Authentification](src/assets/Change1.png)
